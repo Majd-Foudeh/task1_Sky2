@@ -1,0 +1,27 @@
+:root{
+    --mainColor:#232f3e;
+    --bannerColor:#343F4D;
+    --homeIconsColor: #a3d2d4;
+}
+
+nav {
+    background-color: var(--mainColor);
+    color: white;
+}
+
+nav a, nav i,button.navbar-toggler{
+    color: white !important;
+}
+
+button.navbar-toggler {
+border: 0 !important;
+}
+
+.categorySection i{
+    color: var(--homeIconsColor);
+}
+
+.cardBanner{
+background-color: var(--bannerColor);
+color: white;
+}
