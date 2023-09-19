@@ -2,6 +2,7 @@
     --mainColor:#232f3e;
     --bannerColor:#343F4D;
     --homeIconsColor: #a3d2d4;
+    --orangeColor:#f9aa33;
 }
 
 nav {
@@ -25,3 +26,29 @@ border: 0 !important;
 background-color: var(--bannerColor);
 color: white;
 }
+
+.orange{
+  color: var(--orangeColor);  
+}
+
+.banner{
+    background-color: var(--bannerColor);
+}
+
+th{
+    padding: 10px;
+}
+ td{
+    width: fit-content;
+    padding: 15px;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+thead{
+    background-color: var(--bannerColor);
+    color: white;
+}
+
+ 
