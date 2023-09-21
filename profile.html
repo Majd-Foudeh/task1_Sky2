@@ -25,7 +25,7 @@
         <div
           class="container-fl w-100 d-flex flex-wrap align-items-center justify-content-between"
         >
-          <a class="navbar-brand" href="#">Account Receivable </a>
+          <a class="navbar-brand" href="./index.html">Account Receivable </a>
           <div class="d-flex align-items-center gap-3">
             <i class="fa-solid fa-language fs-5 d-inline d-lg-none"></i>
             <i class="fa-solid fa-power-off fs-5 d-inline d-lg-none"></i>
@@ -54,7 +54,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#"
+                  <a class="nav-link active" href="./profile.html"
                     ><i class="fa-regular fa-user me-2"></i>User Name</a
                   >
                 </li>
@@ -68,19 +68,24 @@
       </nav>
     </header>
     <div style="height: 18vh" class="banner">
-      <div class="row me-4 ms-5 mx- align-items-center h-100">
+      <div class="row me-4 ms-5 align-items-center h-100">
         <div class="col-8 col-lg-5">
           <div>
             <a
               class="text-white-50 link-underline link-underline-opacity-0"
-              href=""
+              href="./index.html"
               >Home /</a
             >
+            <a
+              class="text-white-50 link-underline link-underline-opacity-0"
+              href="./company_profiles.html"
+              >company Profiles /</a
+            >
           </div>
-          <div class="fs-2 text-white">Company Profiles</div>
+          <div class="fs-2 text-white"> Inn Tours & Travel</div>
         </div>
         <div
-          class="col-12 col-lg-7 d-flex gap-2 justify-content-center justify-content-sm-start justify-content-lg-end mt-4 d-flex flex-wrap"
+          class="col-12 col-sm-4 col-md-4 col-lg-7 d-none d-sm-flex gap-2 justify-content-center justify-content-sm-end justify-content-md-end justify-content-lg-end mt-4 d-flex flex-wrap"
         >
           <div class="btn-group" role="group" aria-label="Basic example">
             <button type="button" class="btn btn-light">
@@ -120,133 +125,154 @@
           <a class="nav-link disabled px-4" aria-disabled="true">Documents</a>
         </li>
       </ul>
+      <div class="d-flex d-sm-none justify-content-center mt-4">
+        <div class="btn-group w-75 row" role="group" aria-label="Basic example">
+          <button type="button" class="col-9 btn btn-light">
+            <i class="fa-solid fa-pen orange me-2"></i> Edit
+          </button>
+
+          <button type="button" class="col-1 btn btn-light">
+            <i class="fa-solid fa-ellipsis-vertical mx-1"></i>
+          </button>
+        </div>
+      </div>
       <div class="mt-4 row gap-xl-5 w-100 ms-0 justify-content-center">
         <div
-          class="col-11 col-sm-11 col-md-11 col-lg-7 col-xl-8 overflow-x-auto mb-4 bg-light"
+          class="col-11 col-sm-11 col-md-11 col-lg-11 col-xl-8 overflow-x-auto mb-4 bg-light"
         >
-          <form action="" method="post">
+          <form action="">
             <div class="row justify-content-between p-3">
-              <div class="col-7 d-flex flex-column">
+              <div class="col-10 col-lg-7 d-flex flex-column">
                 <div class="col-md-6 mb-3">
-                  <label for="inputEmail4" class="form-label"
-                    >A/R Number*</label
-                  >
+                  <label for="arNumber" class="form-label">A/R Number*</label>
                   <input
-                    type="email"
+                    min="0"
+                    type="number"
                     class="form-control"
                     placeholder="The account number"
-                    id="inputEmail4"
+                    id="arNumber"
                   />
+                  <p id="ErrorArNumber" class="text-danger mb-0"></p>
                 </div>
                 <div class="mb-3">
-                  <label for="inputEmail4" class="form-label">Name*</label>
+                  <label for="companyName" class="form-label">Name*</label>
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     placeholder="The company name"
-                    id="inputEmail4"
+                    id="companyName"
                   />
+                  <p id="ErrorCompanyName" class="text-danger mb-0"></p>
                 </div>
                 <div class="mb-3">
-                  <label for="inputEmail4" class="form-label"
+                  <label for="companyNameAlternate" class="form-label"
                     >Name Alternate</label
                   >
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     placeholder="The company name alternate
                   "
-                    id="inputEmail4"
+                    id="companyNameAlternate"
                   />
                 </div>
                 <div class="col-md-8 mb-3">
-                  <label for="inputState" class="form-label">Category*</label>
-                  <select id="inputState" class="form-select">
-                    <option selected>The company category</option>
-                    <option>...</option>
+                  <label for="category" class="form-label">Category*</label>
+                  <select id="category" class="form-select">
+                    <option selected value="">The company category</option>
+                    <option value="...">...</option>
                   </select>
+                  <p id="errorCompany" class="text-danger mb-0"></p>
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="inputEmail4" class="form-label">VAT Number</label>
+                  <label for="vat" class="form-label">VAT Number</label>
                   <input
-                    type="email"
+                    min="0"
+                    type="number"
                     class="form-control"
                     placeholder="The company VAT number
                   "
-                    id="inputEmail4"
+                    id="vat"
                   />
                 </div>
-                <label for="inputZip" class="form-label"
+                <label for="payment" class="form-label"
                   >Payment terms (Days)*</label
                 >
                 <div class="col-md-3 mb-3">
                   <input
+                    min="0"
                     type="number"
                     placeholder="0"
                     class="form-control"
-                    id="inputZip"
+                    id="payment"
                   />
+                  <p id="ErrorPayment" class="text-danger mb-0"></p>
                 </div>
               </div>
 
-              <div class="col-4 d-flex flex-column">
+              <div class="col-8 col-lg-4 d-flex flex-column">
                 <div class="col-md-7 mb-3">
-                  <label for="inputZip" class="form-label"
+                  <label for="credit" class="form-label"
                     >Credit Limit (USD)</label
                   >
                   <input
+                    min="0"
                     type="number"
                     placeholder="0.000"
                     class="form-control"
-                    id="inputZip"
+                    id="credit"
                   />
                 </div>
-                <label for="inputZip" class="form-label"
+                <label for="currentBalance" class="form-label"
                   >Current Balance (USD)
                 </label>
                 <div class="col-md-7 mb-3">
                   <input
+                    min="0"
                     type="number"
                     placeholder="0.000"
                     class="form-control"
-                    id="inputZip"
+                    id="currentBalance"
                   />
                 </div>
-                <label for="inputZip" class="form-label"
+                <label for="currentGroupBalance" class="form-label"
                   >Current Group Balance (USD)</label
                 >
                 <div class="col-md-7 mb-3">
                   <input
+                    min="0"
                     type="number"
                     placeholder="0.000"
                     class="form-control"
-                    id="inputZip"
+                    id="currentGroupBalance"
                   />
                 </div>
                 <div class="col-md-5 mb-3">
-                  <label for="inputZip" class="form-label">Days to Pay </label>
+                  <label for="Days" class="form-label">Days to Pay </label>
                   <input
+                    min="0"
                     type="number"
                     placeholder="0"
                     class="form-control"
-                    id="inputZip"
+                    id="Days"
                   />
                 </div>
-                <label for="inputZip" class="form-label"
+                <label for="categoryDays" class="form-label"
                   >Category Days to Pay</label
                 >
                 <div class="col-md-5 mb-3">
                   <input
+                    min="0"
                     type="number"
                     placeholder="0"
                     class="form-control"
-                    id="inputZip"
+                    id="categoryDays"
                   />
                 </div>
               </div>
             </div>
-            <div class="row justify-content-evenly justify-content-lg-start">
-              <div class="col-2 col-lg-4 col-xl-2">
+            <div class="row justify-content-evenly justify-content-sm-start">
+              <div class="col-4 col-sm-3 col-md-3 col-lg-4 col-xl-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -258,7 +284,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-2 col-lg-4 col-xl-2">
+              <div class="col-4 col-sm-3 col-md-3 col-lg-4 col-xl-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -270,7 +296,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-2 col-lg-4 col-xl-2">
+              <div class="col-4 col-sm-3 col-md-3 col-lg-4 col-xl-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -282,7 +308,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-2 col-lg-4 col-xl-2">
+              <div class="col-6 col-sm-3 col-md-3 col-lg-4 col-xl-2">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -294,7 +320,7 @@
                   </label>
                 </div>
               </div>
-              <div class="col-3 col-lg-4 col-xl-3">
+              <div class="col-6 col-sm-4 col-md-3 col-lg-4 col-xl-3">
                 <div class="form-check">
                   <input
                     class="form-check-input"
@@ -307,10 +333,11 @@
                 </div>
               </div>
             </div>
+            <button type="submit" class="d-none"></button>
           </form>
           <div class="px-3 mt-5 text-primary">+ Add contact</div>
-          <div class="row gap-5 mt-3 px-4">
-            <div class="card p-0 text-bg-light mb-3 col-5">
+          <div class="row gap-md-5 mt-3 px-4">
+            <div class="card p-0 text-bg-light mb-3 col-11 col-md-5">
               <div class="card-header">
                 <span class="fs-4 fw-medium">Header</span>
 
@@ -331,7 +358,7 @@
                 </p>
               </div>
             </div>
-            <div class="card p-0 text-bg-light mb-3 col-5">
+            <div class="card p-0 text-bg-light mb-3 col-11 col-md-5">
               <div class="card-header">
                 <span class="fs-4 fw-medium">Header</span>
 
@@ -354,8 +381,8 @@
             </div>
           </div>
           <div class="px-3 mt-3 text-primary">+ Add address</div>
-          <div class="row gap-5 mt-3 px-4">
-            <div class="card p-0 text-bg-light mb-3 col-5">
+          <div class="row gap-md-5 mt-3 px-4">
+            <div class="card p-0 text-bg-light mb-3 col-11 col-md-5">
               <div class="card-header">
                 <span class="fs-4 fw-medium">Header</span>
 
@@ -416,7 +443,7 @@
                 </div>
                 <hr class="mt-1" />
               </div>
-              
+
               <div class="text-end me-3 mb-3 mt-4 fw-light orange">
                 EXPLORE <i class="fa-solid fa-arrow-right"></i>
               </div>
@@ -475,5 +502,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="./index.js"></script>
   </body>
 </html>
